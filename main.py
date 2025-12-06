@@ -1,4 +1,5 @@
-from apps import compint, infl
+# imports
+from apps import compint, inflation
 
 
 # help command
@@ -14,12 +15,13 @@ class help():
 cmds = {
     "help": help,
     "compint": compint,
-    "inflation": infl
+    "inflation": inflation
 }
 
 # define main loop
 def main():
     while True:
+        print("Welcome to FINANCIER™. Type \"help\" for a list of available commands.")
         cmd = input("Enter the app you would like to run. For help, type \"help\": ").strip().lower()
         if cmd in cmds:
             cmds[cmd].main()
